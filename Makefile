@@ -1,6 +1,12 @@
 all: n-zawanaoki.pdf
 
-%.dvi: %.tex
+graph.png: graph.gp
+	gnuplot $<
+
+%.xbb: %.png
+	ebb -x $<
+
+%.dvi: %.tex graph.xbb
 	platex $<
 
 %.pdf: %.dvi

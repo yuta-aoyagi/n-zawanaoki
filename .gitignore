@@ -1,3 +1,6 @@
+*.png
+*.xbb
+
 *.aux
 *.log
 *.dvi

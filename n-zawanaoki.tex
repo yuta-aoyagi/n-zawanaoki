@@ -3,7 +3,7 @@
 
 \usepackage{amsmath,amssymb}
 \usepackage{bm}
-\usepackage{graphicx}
+\usepackage[dvipdfmx]{graphicx}
 \usepackage{ascmac}
 
 \setlength{\textwidth}{\fullwidth}
@@ -31,6 +31,22 @@
   0 & (n \le 0)
 \end{cases} \]
 与えられた条件の下で$f(n)$の最大値を求めればよい.
+
+$m = -2$のとき, $n = -2 \cdot 1 \cdot -4 = 8$であるから, $n^2 + m^2 = 68 \ge 16$を満たす.
+このとき$f(n) = 1/8 > 0$であるから, $f(n)$の最大値が$0$であることはない.
+したがって$f(n)$の最大値を求めるには条件を満たす正の$n$の最小値を求めればよい.
+
+$n^2 + m^2 \ge 16$は$mn$-平面で原点を中心とする半径$4$の円(以下$C_1$という)とその外側であり,
+$n = m(m+3)(m-3)$は$m = \pm \sqrt 3$で極値$n = \mp 6 \sqrt 3$をとり変曲点$(m, n) = (0, 0)$を通る三次曲線(以下$C_2$という)である.
+これを図示すると次のようになる.
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=6.5cm]{graph.png}
+  \end{center}
+\end{figure}
+
+図より$C_1$と$C_2$は$m$-軸より上では$-3 < m < - \sqrt 3$, $- \sqrt 3 < m < 0$そして$3 < m < 4$で交わる.
+これらの交点を順に$P_1$, $P_2$そして$P_3$とする.
 
 
 \end{document}
